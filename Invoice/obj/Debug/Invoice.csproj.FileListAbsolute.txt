@@ -1,0 +1,12 @@
+E:\Atib\Projects\Invoice\Invoice\bin\Invoice.dll.config
+E:\Atib\Projects\Invoice\Invoice\bin\Invoice.dll
+E:\Atib\Projects\Invoice\Invoice\bin\Invoice.pdb
+E:\Atib\Projects\Invoice\Invoice\bin\Lumex.Tech.dll
+E:\Atib\Projects\Invoice\Invoice\bin\Microsoft.ReportViewer.Common.dll
+E:\Atib\Projects\Invoice\Invoice\bin\Microsoft.ReportViewer.ProcessingObjectModel.dll
+E:\Atib\Projects\Invoice\Invoice\bin\Microsoft.ReportViewer.WebForms.DLL
+E:\Atib\Projects\Invoice\Invoice\obj\Debug\Invoice.csprojResolveAssemblyReference.cache
+E:\Atib\Projects\Invoice\Invoice\obj\Debug\RdlCompile.cache
+E:\Atib\Projects\Invoice\Invoice\obj\Debug\RdlCompile.compiled
+E:\Atib\Projects\Invoice\Invoice\obj\Debug\Invoice.dll
+E:\Atib\Projects\Invoice\Invoice\obj\Debug\Invoice.pdb
