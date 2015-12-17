@@ -55,6 +55,7 @@
                                 <asp:ListItem Value="L">LumexIT</asp:ListItem>
                                 <asp:ListItem Value="LT">LumexTech</asp:ListItem>
                             </asp:DropDownList>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server" ErrorMessage="Select Any Option:" ControlToValidate="DDLHeader" ForeColor="red"></asp:RequiredFieldValidator>
                         </div>
                         <div class="col-lg-9 text-right margin-top">
                             <asp:Label ID="lblAddress1" runat="server" Text="63/3 (Dolphin Goli), Kolabagan"></asp:Label><br />
@@ -80,7 +81,8 @@
                             <asp:Label ID="lvlReceive" runat="server" Text="Recived with Thanks from: "></asp:Label>
                         </div>
                         <div class="col-lg-9">
-                            <asp:TextBox ID="txtbxReceive" class="form-control" runat="server"></asp:TextBox>
+                            <asp:TextBox ID="txtbxReceive" class="form-control" runat="server" ></asp:TextBox>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Enter Recive Thanks From:" ControlToValidate="txtbxReceive" ForeColor="red"></asp:RequiredFieldValidator>
                         </div>
                     </div>
                     <div class="form-group">
@@ -89,6 +91,7 @@
                         </div>
                         <div class="col-lg-9">
                             <asp:TextBox ID="txtbxService" class="form-control" runat="server"></asp:TextBox>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Enter Service:" ControlToValidate="txtbxService" ForeColor="red"></asp:RequiredFieldValidator>
                         </div>
                     </div>
                     <div class="form-group ">
@@ -97,12 +100,14 @@
                         </div>
                         <div class="col-lg-5">
                             <asp:TextBox ID="txtbxBy" class="form-control" runat="server"></asp:TextBox>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="Enter Payment Type:" ControlToValidate="txtbxBy" ForeColor="red"></asp:RequiredFieldValidator>
                         </div>
                         <div class="col-lg-1">
                             <asp:Label ID="lvlDate" runat="server" Text="Date: "></asp:Label>
                         </div>
                         <div class="col-lg-3">
                             <asp:TextBox ID="txtbxDate" class="form-control" runat="server"></asp:TextBox>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="Enter Date:" ControlToValidate="txtbxDate" ForeColor="red"></asp:RequiredFieldValidator>
                         </div>
                     </div>
                     <div class="form-group ">
@@ -111,6 +116,7 @@
                         </div>
                         <div class="col-lg-9">
                             <asp:TextBox ID="txtbxDues" class="form-control" runat="server"></asp:TextBox>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ErrorMessage="Enter Dues:" ControlToValidate="txtbxDues" ForeColor="red"></asp:RequiredFieldValidator>
                         </div>
                     </div>
                     <div class="form-group">
@@ -119,6 +125,7 @@
                         </div>
                         <div class="col-lg-9">
                             <asp:TextBox ID="txtbxInWords" class="form-control" runat="server"></asp:TextBox>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ErrorMessage="Enter Words:" ControlToValidate="txtbxInWords" ForeColor="red"></asp:RequiredFieldValidator>
                         </div>
                     </div>
                     <div></div>
@@ -128,6 +135,7 @@
                         </div>
                         <div class="col-lg-3">
                             <asp:TextBox ID="txtbxAmount" class="form-control" runat="server"></asp:TextBox>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ErrorMessage="Enter Amount:" ControlToValidate="txtbxAmount" ForeColor="red"></asp:RequiredFieldValidator>
                         </div>
                     </div>
                     <div class="clearfix"></div>

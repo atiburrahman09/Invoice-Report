@@ -23,11 +23,6 @@ namespace Invoice
                 GetData();
             }
             
-            //ReportViewer1.Reset();
-
-            //PrintHelper.PrintWebControl(ctrl);
-
-
         }
 
         private void GetData()
@@ -35,7 +30,6 @@ namespace Invoice
             ReportViewer1.Visible = true;
             string a = LumexSessionManager.Get("name").ToString();
             ReportParameter rp1 = new ReportParameter("name", LumexSessionManager.Get("name").ToString());
-
             ReportParameter rp2 = new ReportParameter("Service", LumexSessionManager.Get("Service").ToString());
             ReportParameter rp3 = new ReportParameter("CashNo", LumexSessionManager.Get("CashNo").ToString());
             ReportParameter rp4 = new ReportParameter("Date", LumexSessionManager.Get("Date").ToString());
