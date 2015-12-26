@@ -9,3 +9,4 @@ E:\Atib\Projects\Invoice\Invoice\obj\Debug\RdlCompile.cache
 E:\Atib\Projects\Invoice\Invoice\obj\Debug\RdlCompile.compiled
 E:\Atib\Projects\Invoice\Invoice\obj\Debug\Invoice.dll
 E:\Atib\Projects\Invoice\Invoice\obj\Debug\Invoice.pdb
+E:\Atib\Projects\Invoice\Invoice\obj\Debug\Invoice.csprojResolveAssemblyReference.cache

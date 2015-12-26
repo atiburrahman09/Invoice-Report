@@ -11,15 +11,25 @@
     <link href="css/bootstrap.min.css" rel="stylesheet" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <%-- <script src="js/jquery.js"></script>
+    <script src="js/jquery.datetimepicker.js"></script>--%>
     <link href="css/Custom.css" rel="stylesheet" />
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css" />
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
     <script>
+        $(document).ready(function () {
+            $("#txtbxDate").datepicker();
+        });
+    </script>
+    <%-- <script>
 
         <%--function PrintPanel() {
             var divElements = document.getElementById("<%= PrintPage.ClientID %>").innerHTML;
             window.print(divElements);
 
         }--%>
-        <%--function PrintPanel() {
+    <%--function PrintPanel() {
             string strHTML = stringWrite.ToString();
             HttpContext.Current.Response.Clear();
             HttpContext.Current.Response.Write("<link href='css/bootstrap.css' rel='stylesheet' type='text/css' />");
@@ -36,14 +46,13 @@
                 printWindow.print();
             }, 500);
             return false;
-        }--%>
-    </script>
-
+        }
+    </script>--%>
 </head>
 <body>
     <form id="form" runat="server">
-         
-        
+
+
         <div class="container">
             <asp:Panel ID="PrintPage" runat="server">
 
@@ -81,7 +90,7 @@
                             <asp:Label ID="lvlReceive" runat="server" Text="Recived with Thanks from: "></asp:Label>
                         </div>
                         <div class="col-lg-9">
-                            <asp:TextBox ID="txtbxReceive" class="form-control" runat="server" ></asp:TextBox>
+                            <asp:TextBox ID="txtbxReceive" class="form-control" runat="server"></asp:TextBox>
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Enter Recive Thanks From:" ControlToValidate="txtbxReceive" ForeColor="red"></asp:RequiredFieldValidator>
                         </div>
                     </div>
@@ -98,18 +107,30 @@
                         <div class="col-lg-3">
                             <asp:Label ID="lvlBy" runat="server" Text="By Cash/ Cheque/ D.D/ P.O.No: "></asp:Label>
                         </div>
-                        <div class="col-lg-5">
+                        <div class="col-lg-3">
+                            <asp:DropDownList ID="ddlBy" CssClass="form-control" AutoPostBack="True" runat="server" OnSelectedIndexChanged="ddlBy_SelectedIndexChanged">
+                                <asp:ListItem Value="">Select..</asp:ListItem>
+                                <asp:ListItem Value="C">Cash</asp:ListItem>
+                                <asp:ListItem Value="CH">Cheque</asp:ListItem>
+                                <asp:ListItem Value="D">D.D</asp:ListItem>
+                                <asp:ListItem Value="P">P.O</asp:ListItem>
+                            </asp:DropDownList>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator9" runat="server" ErrorMessage="Enter Payment Type:" ControlToValidate="ddlBy" ForeColor="red"></asp:RequiredFieldValidator>
+                        </div>
+                        <div class="col-lg-3">
                             <asp:TextBox ID="txtbxBy" class="form-control" runat="server"></asp:TextBox>
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="Enter Payment Type:" ControlToValidate="txtbxBy" ForeColor="red"></asp:RequiredFieldValidator>
                         </div>
+
                         <div class="col-lg-1">
                             <asp:Label ID="lvlDate" runat="server" Text="Date: "></asp:Label>
                         </div>
-                        <div class="col-lg-3">
-                            <asp:TextBox ID="txtbxDate" class="form-control" runat="server"></asp:TextBox>
+                        <div class="col-lg-2 ">
+                            <asp:TextBox ID="txtbxDate" CssClass="form-control" runat="server"></asp:TextBox>
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="Enter Date:" ControlToValidate="txtbxDate" ForeColor="red"></asp:RequiredFieldValidator>
                         </div>
                     </div>
+                    <div class="clearfix "></div>
                     <div class="form-group ">
                         <div class="col-lg-3">
                             <asp:Label ID="lvlDues" runat="server" Text="Dues Of"></asp:Label>
@@ -128,7 +149,7 @@
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ErrorMessage="Enter Words:" ControlToValidate="txtbxInWords" ForeColor="red"></asp:RequiredFieldValidator>
                         </div>
                     </div>
-                    <div></div>
+
                     <div class="form-group ">
                         <div class="col-lg-3">
                             <asp:Label ID="lvlAmount" runat="server" Text="Amount"></asp:Label>
@@ -157,8 +178,9 @@
                 <asp:Button ID="btnPrint" runat="server" class="btn btn-primary" OnClick="btnPrint_OnClick" Text="Print" />
                 <%--OnClientClick="javascript:PrintPanel();"--%>
             </div>
+
         </div>
-       
+
     </form>
 </body>
 </html>

@@ -78,10 +78,16 @@
     <Content Include="css\bootstrap.css" />
     <Content Include="css\bootstrap.min.css" />
     <Content Include="css\Custom.css" />
+    <Content Include="css\pikaday.css" />
+    <Content Include="css\site.css" />
+    <Content Include="css\theme.css" />
     <Content Include="Index.aspx" />
     <Content Include="js\bootstrap.js" />
     <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\jquery.datetimepicker.js" />
+    <Content Include="js\jquery.js" />
     <Content Include="js\npm.js" />
+    <Content Include="js\pikaday.js" />
     <Content Include="Print.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
